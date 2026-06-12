@@ -313,7 +313,7 @@ def create_left_sidebar() -> html.Aside:
                     dcc.Tab(label="🔍 模式挖掘", value="tab-pattern"),
                 ]
             ),
-            html.Div(className="sidebar-content", children=[
+            html.Div(id="sidebar-content", className="sidebar-content", children=[
                 create_data_panel(),
                 create_stay_panel(),
                 create_similarity_panel(),
@@ -494,7 +494,7 @@ def create_right_panel() -> html.Aside:
                     dcc.Tab(label="💾 导出", value="tab-export"),
                 ]
             ),
-            html.Div(className="right-panel-content", children=[
+            html.Div(id="right-panel-content", className="right-panel-content", children=[
                 create_stats_panel(),
                 create_detail_panel(),
                 create_export_panel(),
